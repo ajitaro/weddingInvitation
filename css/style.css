@@ -295,6 +295,14 @@ h1, h2, h3, h4, h5, h6, figure {
   transform: scale(1.2);
 }
 
+#fh5co-header,
+.fh5co-cover {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .fh5co-cover {
   height: 900px;
   background-size: cover;
@@ -1053,6 +1061,12 @@ form label {
   .heart {
     display: none;
   }
+}
+
+.salam-text h3 {
+  font-family: "Sacramento", Arial, serif;
+  color: #5d5d5d;
+  font-size: 30px;
 }
 
 .couple-half {
