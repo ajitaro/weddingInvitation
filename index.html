@@ -68,9 +68,8 @@
 	<body>
 		
 	<div class="fh5co-loader"></div>
-	<audio autoplay loop id="playAudio">
-		<source src="./music/background_music.mp3">
-	</audio>
+
+	<audio src="./music/background_music.mp3" controls loop="loop" type="audio/mpeg" id="audioplayer"></audio>
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
@@ -627,6 +626,15 @@
         day: d.getDate(),
         enableUtc: false
     });
+
+	// audio
+	window.onload = function() {
+    document.getElementById("audioplayer").play();
+
+	$(document).ready(function() {
+    	$("#audioplayer").get(0).play();
+	});
+}
 </script>
 
 	</body>
