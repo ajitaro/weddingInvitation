@@ -69,13 +69,33 @@
 		
 	<div class="fh5co-loader"></div>
 
-	<audio src="./music/background_music.mp3" loop="loop" type="audio/mpeg" id="audioplayer"></audio>
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
 					<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
+				</div>
+				<div class="col-xs-10 text-right">
+
+					<button id="playAudio">Play</button>
+
+					<script type="text/javascript">
+					document.getElementById("playAudio").addEventListener("click", function(){
+						var audio = document.getElementById('audioplayer');
+					if(this.className == 'is-playing'){
+						this.className = "";
+						this.innerHTML = "Play"
+						audio.pause();
+					}else{
+						this.className = "is-playing";
+						this.innerHTML = "Pause";
+						audio.play();
+					}
+
+					});
+					</script>
+					<audio controlsList="nodownload" src="./music/background_music.mp3" loop="loop" type="audio/mpeg" id="audioplayer">Browser Anda tidak dapat memutar audio</audio>
 				</div>
 				<!-- <div class="col-xs-10 text-right menu-1">
 					<ul>
